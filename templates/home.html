@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>NLP Services | Home</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to NLP Services</h1>
+        <p>Select a model for sentiment analysis:</p>
+        <form action="/sentiment" method="POST">
+            <textarea name="text" rows="4" placeholder="Enter text for sentiment analysis..." required></textarea>
+            <div>
+                <label>
+                    <input type="radio" name="model_choice" value="distilbert" checked> DistilBERT
+                </label>
+                <label>
+                    <input type="radio" name="model_choice" value="bert"> BERT
+                </label>
+                <label>
+                    <input type="radio" name="model_choice" value="roberta"> RoBERTa
+                </label>
+            </div>
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+    </div>
+</body>
+</html>
