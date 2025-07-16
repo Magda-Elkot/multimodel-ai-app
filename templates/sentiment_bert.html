@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sentiment Analysis Result – BERT</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>📝 Sentiment Analysis Result</h1>
+    <p><strong>Input:</strong> "{{ text }}"</p>
+    <p><strong>🔍 Sentiment:</strong> {{ sentiment.label }} <em>(Confidence: {{ sentiment.score }})</em></p>
+    <p><strong>🧠 Model Used:</strong> <code>BERT</code> (<code>bert-base-uncased</code>)</p>
+  </header>
+
+  <section class="model-explanation">
+    <h2>📘 About BERT</h2>
+    <p>
+      <strong>BERT</strong> (Bidirectional Encoder Representations from Transformers) is a deep learning model developed by Google. 
+      It’s unique because it reads text <strong>in both directions</strong>—left-to-right and right-to-left—allowing it to understand context better than traditional models.
+    </p>
+
+    <h3>🧩 BERT Architecture</h3>
+    <ul>
+      <li>📚 <strong>Input Embeddings:</strong> Convert words into numerical vectors that the model understands.</li>
+      <li>🎯 <strong>Positional Embeddings:</strong> Add information about word positions in a sentence.</li>
+      <li>🧠 <strong>Transformer Layers:</strong> BERT base includes 12 layers, each with:
+        <ul>
+          <li>🔁 Multi-Head Self-Attention Mechanism</li>
+          <li>⚙️ Feedforward Neural Network</li>
+          <li>🌀 Layer Normalization + Residual Connections</li>
+        </ul>
+      </li>
+      <li>🏁 <strong>Output:</strong> A contextual vector used for downstream tasks like sentiment classification.</li>
+    </ul>
+
+    <h3>📊 Visual: Simplified BERT Flow</h3>
+    <img src="{{ url_for('static', filename='bert_diagram.png') }}" alt="BERT Architecture Diagram" style="max-width: 100%; border-radius: 10px;" />
+
+    <h3>💬 Why Choose BERT?</h3>
+    <ul>
+      <li>✅ Understands deep context using bidirectional attention.</li>
+      <li>✅ Pre-trained on large datasets like Wikipedia and BooksCorpus.</li>
+      <li>✅ Can be fine-tuned for many tasks: sentiment analysis, question answering, summarization, etc.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>🔙 <a href="/">Back to Home</a> | Built with ❤️ by Magda</p>
+  </footer>
+</body>
+</html>

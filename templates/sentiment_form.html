@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>💬 Sentiment Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>💬 Sentiment Analysis Playground</h1>
+    <p class="subtitle">Type something and choose a model to feel the vibe 🧸</p>
+  </header>
+
+  <section>
+    <form action="/nlp/sentiment/result" method="POST">
+      <textarea name="text" rows="4" placeholder="Type a sentence like 'I love this app!' 💌"></textarea>
+
+      <div class="model-options">
+        <label><input type="radio" name="model_choice" value="bert"> 🧠 BERT</label>
+        <label><input type="radio" name="model_choice" value="distilbert" checked> ⚡ DistilBERT</label>
+        <label><input type="radio" name="model_choice" value="roberta"> 🚀 RoBERTa</label>
+      </div>
+
+      <button type="submit" class="btn big">Analyze ✨</button>
+    </form>
+  </section>
+
+  <footer>
+    <a href="/nlp" class="back">← Back to NLP</a>
+  </footer>
+</body>
+</html>

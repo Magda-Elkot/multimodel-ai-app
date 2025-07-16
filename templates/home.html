@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>NLP Services | Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multimodel AI Study App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to NLP Services</h1>
-        <p>Select a model for sentiment analysis:</p>
-        <form action="/sentiment" method="POST">
-            <textarea name="text" rows="4" placeholder="Enter text for sentiment analysis..." required></textarea>
-            <div>
-                <label>
-                    <input type="radio" name="model_choice" value="distilbert" checked> DistilBERT
-                </label>
-                <label>
-                    <input type="radio" name="model_choice" value="bert"> BERT
-                </label>
-                <label>
-                    <input type="radio" name="model_choice" value="roberta"> RoBERTa
-                </label>
-            </div>
-            <button type="submit">Analyze Sentiment</button>
-        </form>
+    <header>
+    <h1>🎓 Multimodel AI Study Platform</h1>
+    <p>Explore & Learn AI Models — Try them, Understand them, Be Inspired!</p>
+    <div class="magda-heart">
+        <p>💖 From Magda's Heart: I built this platform as a learning companion — for students, dreamers, and anyone curious about the magic of AI. Let this space be your spark of inspiration. ✨</p>
     </div>
+    </header>
+
+
+  <section class="intro">
+    <h2>🌟 Why I Built This</h2>
+    <p>Hello! I'm Magda, and I built this app to help <strong>students, AI enthusiasts, and myself</strong> study and explore the magic of AI in a fun and interactive way.</p>
+    <p>Whether you're a beginner or an advanced learner, I hope this site inspires you to dive deeper into Machine Learning, Natural Language Processing, and Computer Vision.</p>
+  </section>
+
+  <section class="domains">
+    <h2>📘 What Are These AI Domains?</h2>
+    <ul>
+      <li><strong>→ AI (Artificial Intelligence):</strong> Teaching machines to think like humans.</li>
+      <li><strong>→ ML (Machine Learning):</strong> Training machines to learn from data.</li>
+      <li><strong>→ NLP (Natural Language Processing):</strong> Teaching machines to understand language.</li>
+      <li><strong>→ CV (Computer Vision):</strong> Teaching machines to understand images.</li>
+    </ul>
+  </section>
+
+  <section class="explore-fields">
+    <h2>🧠✨ Explore AI Domains</h2>
+    <p class="subtitle">Pick a path and start your adventure into the world of intelligent machines!</p>
+
+    <div class="domain-buttons">
+        <a href="/nlp" class="btn">🗣️ Natural Language Processing (NLP)</a>
+        <a href="/cv" class="btn">👁️ Computer Vision (CV)</a>
+        <a href="/ml" class="btn">📊 Machine Learning (ML)</a>
+    </div>
+
+    <p class="note">
+        💡 Each domain includes exciting tasks like:
+        <br>→ Sentiment Analysis, Text Summarization, Image Classification, Predictions & more!
+        <br>Click a card above to dive in! 🚀
+    </p>
+   </section>
+
+  <footer>
+    <p>Built by Magda 💻 | <a href="https://github.com/Magda-Elkot/multimodel-ai-app" target="_blank">GitHub Repo</a></p>
+  </footer>
 </body>
 </html>

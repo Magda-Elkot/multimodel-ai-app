@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Sentiment Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>🎉 Sentiment Result</h1>
+    <p class="subtitle">Here's what the model thinks!</p>
+  </header>
+
+  <section>
+    <p><strong>📝 Input:</strong> {{ text }}</p>
+    <p><strong>🔍 Sentiment:</strong> {{ sentiment }}</p>
+    <p><strong>🧠 Model Used:</strong> {{ model }}</p>
+
+    <div class="model-info">
+      <h3>📘 About This Model</h3>
+      <p>{{ model_info }}</p>
+    </div>
+
+    <a href="/nlp/sentiment" class="btn">🔄 Try Another</a>
+  </section>
+
+  <footer>
+    <a href="/" class="back">← Back to Home</a>
+  </footer>
+</body>
+</html>
